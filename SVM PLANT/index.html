@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Health Classifier</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Plant Health Classifier</h1>
+
+        <!-- Upload form with image preview -->
+        <form id="uploadForm" onsubmit="classifyPlant(event)">
+            <label for="fileInput">Upload an image:</label>
+            <input type="file" id="fileInput" name="file" onchange="previewImage()" required>
+            <button type="submit">Upload & Classify</button>
+        </form>
+
+        <!-- Image preview element -->
+         <div class="output">
+            <div class="image-preview">
+                <img id="imagePreview" alt="Image Preview" style="display: none; max-width: 100%; margin-top: 10px;">
+            </div>
+    
+            <!-- The result section will dynamically display classification results -->
+            <div id="result" style="display: none;">
+                <h2>Classification Result: <span id="classificationResult"></span></h2>
+                <img id="uploadedImage" src="" alt="Uploaded Image" style="max-width: 100%; margin-top: 10px;">
+            </div>
+         </div>
+        
+    </div>
+</body>
+</html>
